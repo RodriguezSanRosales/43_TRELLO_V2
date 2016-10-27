@@ -1,0 +1,38 @@
+body{
+	background-color: #35C9CB !important;
+}
+
+h1{
+	color: white !important;
+	text-align: center;	
+}
+h4{
+	color: white !important;
+	margin-bottom: 1%;
+}
+header {
+	background-color: #12B3B1;
+	margin-bottom: 1%;
+
+}
+li{
+	display: inline-block;
+	margin-top: 15px;
+	padding-right: 5px;
+	color: white;
+	
+}
+
+span{
+	background-color: #35C9CB;
+	padding: 10px; 
+}
+
+.backg{
+	background-color: #35C9CB;
+	padding: 8px;
+}
+
+.BackRed{
+	background-color: #F40303;
+}
