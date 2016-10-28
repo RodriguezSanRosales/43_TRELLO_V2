@@ -36,3 +36,27 @@ span{
 .BackRed{
 	background-color: #F40303;
 }
+
+/*estilo a los div*/
+.contenedorint{
+	float: left;
+	width: 20%;
+	background-color: #12B3B1;
+	border: solid #12B3B1 5px;
+	border-radius: 5px 5px 5px 5px;
+	margin: 5px;
+	color: 
+}
+/*tarjetas*/
+p{
+	background-color: #FFFFFF;
+	border: solid #FFFFFF 5px;
+	border-radius: 5px 5px 5px 5px;
+}
+.botonGuardaTarjeta{
+	background-color: #F07D17;
+	border: solid #F07D17 5px;
+	border-radius: 5px 5px 5px 5px;
+	color: #FFFFFF;
+	margin-top: 5px;
+}
