@@ -79,22 +79,36 @@ window.addEventListener("load",function(){
 	});
 
 	function arrastrando(e){ //arrastra el texto 
-			e.dataTransfer.setData("text",this.id);
-		}
-		function arrastrar(e){
-			e.preventDefault(); //acepta lo que el navegador va a mover
-		}
-		function soltar(e){
-			var idMove = e.dataTransfer.getData("text");
-			var elMove = document.getElementById(idMove);
-			this.insertBefore(elMove,this.childNodes[1]);//revisar esto!! Sandra del futuro porque no funciona.Intenta otra cosa
-		}
-		function finalizarArrastre(e){
-			e.target.style.backgroundColor = "#C1FAFF";//color 
-		}
-		function dejarArrastrar(e){
-			e.target.style.backgroundColor = "#FFFEB5";//color 
-		}
+		e.dataTransfer.setData("text",e.target.id); //dataTransfer:nos permitirá recoger el contenido del objeto arrastrado.
+		//nos devuelve la información del contenido del elemento arrastrado
+		//setData() : Indica el tipo de contenido asociado que queremos recoger del evento.
+	}
+	function arrastrar(e){
+		e.preventDefault(); //acepta lo que el navegador va a mover
+	 }
+
+	function soltar(e){
+		e.stopPropagation();
+	    e.preventDefault();
+		var idMove = e.dataTransfer.getData("text");//getData() : Indica el tipo de contenido que debe ser volcado en el evento.
+		var elMove = document.getElementById(idMove);
+		this.insertBefore(elMove,this.childNodes[1]);//revisar esto!! Sandra del futuro porque no funciona.Intenta otra cosa
+	}
+
+	// function soltar(e, el) { //otra forma de soltar
+	//     e.stopPropagation();
+	//     e.preventDefault();
+	//     var data = e.dataTransfer.getData("text");
+	//     e.target.appendChild(document.getElementById(data));
+	//     e.dataTransfer.clearData();
+	// }
+
+	function finalizarArrastre(e){
+		e.target.style.backgroundColor = "#C1FAFF";//color tarjeta
+	}
+	function dejarArrastrar(e){
+		e.target.style.backgroundColor = "#FFFEB5";//color lista
+	}
 
 	
 });
