@@ -19,9 +19,8 @@ window.addEventListener("load",function(){
 		contenedor.appendChild(listaInpu);
 	    contenedor.appendChild(buttonAgregar);
 	    guardaContenedor.replaceChild(contenedor, agregaLista);
-	    listaInpu.focus();
+	    listaInpu.focus();//agregando focus
 	    //
-	    
 	    
 	    //boton para guardar lista
 		buttonAgregar.onclick = function guardarList(e){
@@ -88,13 +87,13 @@ window.addEventListener("load",function(){
 		function soltar(e){
 			var idMove = e.dataTransfer.getData("text");
 			var elMove = document.getElementById(idMove);
-			this.insertBefore(elMove,this.childNodes[1]);
+			this.insertBefore(elMove,this.childNodes[1]);//revisar esto!! Sandra del futuro porque no funciona.Intenta otra cosa
 		}
 		function finalizarArrastre(e){
-			e.target.style.backgroundColor = "red";//color 
+			e.target.style.backgroundColor = "#C1FAFF";//color 
 		}
 		function dejarArrastrar(e){
-			e.target.style.backgroundColor = "red";//color 
+			e.target.style.backgroundColor = "#FFFEB5";//color 
 		}
 
 	
